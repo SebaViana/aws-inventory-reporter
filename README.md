@@ -18,5 +18,6 @@ chmod +x aws-inventory-reporter.sh
 ./aws-inventory-reporter.sh
 ```
 
-The output of this script will consist of specific information and the total amount of each resource mentioned above.
-The output is displayed on the screen and also saved in a file located in the reports/ folder within the current script directory. The reports are named in the format aws_inventory_$(date +"%Y-%m-%d_%H-%M-%S").txt.
+The output of this script will consist of specific information and the total amount of each resource mentioned above.  
+The output is displayed on the screen and also saved in a file located in the reports/ folder within the current script directory. Use --no-file to prevent the script from creating an output file.  
+The reports are named in the format aws_inventory_$(date +"%Y-%m-%d_%H-%M-%S").txt.  
