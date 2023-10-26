@@ -10,12 +10,12 @@ This bash script gathers information about multiple AWS resources. This resource
 
 3. Make the script executable:
 ```
-chmod +x aws-inventory-reporter.sh
+chmod +x aws_inventory_reporter.sh
 ```
 
 4. Run the script
 ```
-./aws-inventory-reporter.sh
+./aws_inventory_reporter.sh
 ```
 
 The output of this script will consist of specific information and the total amount of each resource mentioned above.  
