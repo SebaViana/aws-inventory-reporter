@@ -18,4 +18,4 @@ chmod +x aws-inventory-reporter.sh
 ./aws-inventory-reporter.sh
 ```
 
-The output of this script will consist of information about each of each resource mentioned above.
+The output of this script will consist of specific information and the total amount of each resource mentioned above.
