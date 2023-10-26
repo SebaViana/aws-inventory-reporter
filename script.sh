@@ -14,20 +14,24 @@ count_instances() {
 
 buckets=$(aws s3api list-buckets --output json | jq -r '.Buckets[] | "\(.Name), \(.CreationDate)"')
 echo "######### S3 buckets #########"
+echo "Bucket name, Creation date"
 echo "$buckets"
 count_instances "S3 buckets" "$buckets"
 
 instances=$(aws ec2 describe-instances | jq -r '.Reservations[] | .Instances[] | "\(.InstanceId), \(.State.Name)"')
 echo "######### EC2 instances ##########"
+echo "Instance ID, State"
 echo "$instances"
 count_instances "EC2 instances" "$instances"
 
 lambda=$(aws lambda list-functions | jq -r '.Functions[] | "\(.FunctionName), \(.Runtime)"')
 echo "######### Lambda functions #########"
+echo "Function name, Runtime"
 echo "$lambda"
 count_instances "Lambda functions" "$lambda"
 
 users=$(aws iam list-users | jq -r '.Users[] | "\(.UserName), \(.CreateDate)"')
 echo "######### IAM users #########"
+echo "User name, Create date"
 echo "$users"
 count_instances "IAM users" "$users"
